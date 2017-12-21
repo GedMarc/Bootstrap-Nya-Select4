@@ -57,8 +57,8 @@ public class NysSelectBootstrapConfigurator extends PageConfigurator
 		if (!page.isConfigured())
 		{
 			page.getAngular().getAngularModules().add(new NyaSelectAngularModule());
-			page.getBody().getJavascriptReferences().add(NyaSelectReferencePool.Nya4Reference.getJavaScriptReference());
-			page.getBody().getCssReferences().add(NyaSelectReferencePool.Nya4Reference.getCssReference());
+			page.getBody().getJavascriptReferences().add(NyaSelectReferencePool.NyaReference.getJavaScriptReference());
+			page.getBody().getCssReferences().add(NyaSelectReferencePool.NyaReference.getCssReference());
 
 		}
 

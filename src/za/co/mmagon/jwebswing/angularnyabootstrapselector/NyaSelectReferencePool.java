@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,10 +28,10 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum NyaSelectReferencePool implements ReferencePool
 {
-	NyaReference(new JavascriptReference("nya", 1.0, "bower_components/nya-bootstrap-select/dist/js/nya-bs-select.js"),
-	             new CSSReference("nya", 1.0, "bower_components/nya-bootstrap-select/dist/css/nya-bs-select.css")),
-	Nya4Reference(new JavascriptReference("nya4", 1.0, "bower_components/nya-bootstrap4-select/dist/js/nya-bs-select.js"),
-	              new CSSReference("nya4", 1.0, "bower_components/nya-bootstrap4-select/dist/css/nya-bs-select.css"));
+	NyaReference(new JavascriptReference("nya", 1.0, "bower_components/nya-bootstrap-select/dist/js/nya-bs-select.min.js"),
+	             new CSSReference("nya", 1.0, "bower_components/nya-bootstrap-select/dist/css/nya-bs-select.min.css")),
+	Nya4Reference(new JavascriptReference("nya4", 1.0, "bower_components/nya-bootstrap4-select/dist/js/nya-bs-select.min.js"),
+	              new CSSReference("nya4", 1.0, "bower_components/nya-bootstrap4-select/dist/css/nya-bs-select.min.css"));
 	/**
 	 * The actual javascript
 	 */
@@ -40,14 +40,14 @@ public enum NyaSelectReferencePool implements ReferencePool
 	 * The actual css reference
 	 */
 	private CSSReference cssReference;
-	
+
 	/**
 	 * Constructs a reference pool
 	 */
 	NyaSelectReferencePool()
 	{
 	}
-	
+
 	/**
 	 * Constructs a new reference pool
 	 *
@@ -59,7 +59,7 @@ public enum NyaSelectReferencePool implements ReferencePool
 		this.javaScriptReference = javaScriptReference;
 		this.cssReference = cssReference;
 	}
-	
+
 	/**
 	 * Returns the javascript reference
 	 *
@@ -70,7 +70,7 @@ public enum NyaSelectReferencePool implements ReferencePool
 	{
 		return javaScriptReference;
 	}
-	
+
 	/**
 	 * Sets the javascript reference
 	 *
@@ -81,7 +81,7 @@ public enum NyaSelectReferencePool implements ReferencePool
 	{
 		this.javaScriptReference = javaScriptReference;
 	}
-	
+
 	/**
 	 * Gets the cSS reference
 	 *
@@ -92,7 +92,7 @@ public enum NyaSelectReferencePool implements ReferencePool
 	{
 		return cssReference;
 	}
-	
+
 	/**
 	 * Sets the CSS Reference
 	 *

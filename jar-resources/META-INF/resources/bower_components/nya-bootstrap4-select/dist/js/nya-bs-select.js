@@ -1,5 +1,5 @@
 /**
- * @lordfriend/nya-bootstrap-select v2.2.0
+ * nya-bootstrap-select v2.1.6
  * Copyright 2014 Nyasoft
  * Licensed under MIT license
  */
@@ -435,8 +435,8 @@
 
         var ACTIONS_BOX = '<div class="bs-actionsbox">' +
             '<div class="btn-group btn-group-sm btn-block">' +
-            '<button type="button" class="actions-btn bs-select-all btn btn-default">SELECT ALL</button>' +
-            '<button type="button" class="actions-btn bs-deselect-all btn btn-default">DESELECT ALL</button>' +
+            '<button class="actions-btn bs-select-all btn btn-default">SELECT ALL</button>' +
+            '<button class="actions-btn bs-deselect-all btn btn-default">DESELECT ALL</button>' +
             '</div>' +
             '</div>';
 
@@ -512,9 +512,9 @@
                         dropdownToggle.addClass(className);
                     }
 
-                    // if(className === 'form-control') {
-                    //   dropdownToggle.addClass(className);
-                    // }
+                    if (className === 'form-control') {
+                        dropdownToggle.addClass(className);
+                    }
                 });
 
                 dropdownMenu.append(options);
@@ -1077,19 +1077,6 @@
                         }
                     }
 
-                    function supportsSelector(selector) {
-                        var el = document.createElement('div');
-                        el.innerHTML = ['&shy;', '<style>', selector, '{}', '</style>'].join('');
-                        el = document.body.appendChild(el);
-                        var style = el.getElementsByTagName('style')[0];
-                        if (style && style.sheet && style.sheet.rules && style.sheet.cssRules) {
-                            var ret = !!(style.sheet.rules || style.sheet.cssRules)[0];
-                            document.body.removeChild(el);
-                            return ret;
-                        }
-                        return false;
-                    }
-
                     function findFocus(fromFirst) {
                         var firstLiElement;
                         if (fromFirst) {
@@ -1099,18 +1086,10 @@
                         }
 
                         // focus on selected element
-                        if (supportsSelector(".selected:not(.not-match)")) {
-                            var match = dropdownMenu[0].querySelector('.selected:not(.not-match)');
-                            if (match)
-                                return match;
-                        }
-                        else {
-                            // Fallback for IE8 users
-                            for (var i = 0; i < dropdownMenu.children().length; i++) {
-                                var childElement = dropdownMenu.children().eq(i);
-                                if (!childElement.hasClass('not-match') && childElement.hasClass('selected')) {
-                                    return dropdownMenu.children().eq(i)[0];
-                                }
+                        for (var i = 0; i < dropdownMenu.children().length; i++) {
+                            var childElement = dropdownMenu.children().eq(i);
+                            if (!childElement.hasClass('not-match') && childElement.hasClass('selected')) {
+                                return dropdownMenu.children().eq(i)[0];
                             }
                         }
 
@@ -1165,7 +1144,7 @@
 
                             for (var i = 0; i < liElements.length; i++) {
                                 var nyaBsOption = jqLite(liElements[i]);
-                                if (nyaBsOption.hasClass('disabled') || nyaBsOption.hasClass('not-match'))
+                                if (nyaBsOption.hasClass('disabled'))
                                     continue;
 
                                 var value, index;
@@ -1314,10 +1293,8 @@
                                     length = bsOptionElements.length,
                                     optionTitle,
                                     selection = [],
-                                    optionScopes = [],
                                     match,
-                                    count,
-                                    clone;
+                                    count;
 
                                 if (isMultiple && $attrs.selectedTextFormat === 'count') {
                                     count = 1;
@@ -1354,7 +1331,6 @@
                                                     selection.push(document.createTextNode(optionTitle));
                                                 } else {
                                                     selection.push(getOptionText(nyaBsOption));
-                                                    optionScopes.push(nyaBsOption.data('isolateScope'))
                                                 }
 
                                             }
@@ -1365,7 +1341,6 @@
                                                     selection.push(document.createTextNode(optionTitle));
                                                 } else {
                                                     selection.push(getOptionText(nyaBsOption));
-                                                    optionScopes.push(nyaBsOption.data('isolateScope'))
                                                 }
                                             }
                                         }
@@ -1380,23 +1355,12 @@
                                     dropdownToggle.removeClass('show-special-title');
                                     // either single or multiple selection will show the only selected content.
                                     filterOption.empty();
-                                    // the isolateScope attribute may not set when we use the static version nya-bs-option class with data-value attribute.
-                                    if (optionScopes[0]) {
-                                        clone = $compile(selection[0])(optionScopes[0]);
-                                    } else {
-                                        clone = selection[0];
-                                    }
-                                    filterOption.append(clone);
+                                    filterOption.append(selection[0]);
                                 } else {
                                     dropdownToggle.removeClass('show-special-title');
                                     filterOption.empty();
                                     for (index = 0; index < selection.length; index++) {
-                                        if (optionScopes[index]) {
-                                            clone = $compile(selection[index])(optionScopes[index]);
-                                        } else {
-                                            clone = selection[index];
-                                        }
-                                        filterOption.append(clone);
+                                        filterOption.append(selection[index]);
                                         if (index < selection.length - 1) {
                                             filterOption.append(document.createTextNode(', '));
                                         }

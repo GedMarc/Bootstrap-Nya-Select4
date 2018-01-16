@@ -28,10 +28,8 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum NyaSelectReferencePool implements ReferencePool
 {
-	NyaReference(new JavascriptReference("nya", 1.0, "bower_components/nya-bootstrap-select/dist/js/nya-bs-select.min.js"),
-	             new CSSReference("nya", 1.0, "bower_components/nya-bootstrap-select/dist/css/nya-bs-select.min.css")),
-	Nya4Reference(new JavascriptReference("nya4", 1.0, "bower_components/nya-bootstrap4-select/dist/js/nya-bs-select.min.js"),
-	              new CSSReference("nya4", 1.0, "bower_components/nya-bootstrap4-select/dist/css/nya-bs-select.min.css"));
+	NyaReference(new JavascriptReference("nya", 1.0, "bower_components/nya-bootstrap4-select/dist/js/nya-bs-select.min.js"),
+	             new CSSReference("nya", 1.0, "bower_components/nya-bootstrap4-select/dist/css/nya-bs-select.min.css"));
 	/**
 	 * The actual javascript
 	 */

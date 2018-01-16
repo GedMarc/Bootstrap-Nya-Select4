@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "nya-bootstrap4-select": "https://github.com/GedMarc/nya-bootstrap4-select.git"
+    "nya-bootstrap4-select": "https://github.com/GedMarc/nya-bootstrap4-select.git#*"
   }
 }

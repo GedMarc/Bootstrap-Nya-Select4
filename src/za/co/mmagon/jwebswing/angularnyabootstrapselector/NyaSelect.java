@@ -44,29 +44,37 @@ public class NyaSelect extends List<NyaSelectChildren, NyaSelectAttributes, NyaS
 
 	/**
 	 * Constructs a new instance
-	 * <p>
-	 */
-	public NyaSelect()
-	{
-		this("data.nya");
-	}
-
-	/**
-	 * Constructs a new instance
 	 *
 	 * @param bindingVariableName
 	 */
 	public NyaSelect(String bindingVariableName)
 	{
-		super(true);
-		addClass("nya-bs-select");
+		this();
 		addAttribute(AngularAttributes.ngModel, bindingVariableName);
+	}
+
+	/**
+	 * Constructs a new instance
+	 * <p>
+	 */
+	public NyaSelect()
+	{
+		super(true);
 		JQueryPageConfigurator.setRequired(true);
 		AngularPageConfigurator.setRequired(true);
+		addClass("nya-bs-select");
+	}
+
+	@Override
+	public NyaSelect bind(String variableName)
+	{
+		addAttribute(AngularAttributes.ngModel, variableName);
+		return this;
 	}
 
 	/**
 	 * Returns a trimmed structure for nya select
+	 *
 	 * @return
 	 */
 	public INyaSelect asMe()

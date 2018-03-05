@@ -22,7 +22,6 @@ import za.co.mmagon.jwebswing.base.html.List;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.BSFormChildren;
 import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
-import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.groups.sets.BSFormSetChildren;
 import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 
 /**
@@ -39,7 +38,7 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSNyaSelect/wiki")
 public class NyaSelect
 		extends List<NyaSelectChildren, NyaSelectAttributes, NyaSelectEvents, NyaSelect>
-		implements BSFormChildren, BSFormGroupChildren, BSFormSetChildren, INyaSelect
+		implements BSFormChildren, BSFormGroupChildren, INyaSelect
 {
 
 	private static final long serialVersionUID = 1L;

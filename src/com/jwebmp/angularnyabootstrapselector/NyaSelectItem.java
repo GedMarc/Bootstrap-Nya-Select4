@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.angularnyabootstrapselector;
+package com.jwebmp.angularnyabootstrapselector;
 
-import za.co.mmagon.jwebswing.base.html.*;
-import za.co.mmagon.jwebswing.plugins.bootstrap4.dropdown.options.BSDropDownOptions;
+import com.jwebmp.base.html.*;
+import com.jwebmp.plugins.bootstrap4.dropdown.options.BSDropDownOptions;
 
 /**
  * @author GedMarc
@@ -99,18 +99,6 @@ public class NyaSelectItem
 		return iconClass;
 	}
 
-	public String getText()
-	{
-		return text;
-	}
-
-	@Override
-	public NyaSelectItem setText(String text)
-	{
-		this.text = text;
-		return this;
-	}
-
 	public String getSubText()
 	{
 		return subText;
@@ -190,17 +178,6 @@ public class NyaSelectItem
 		return getSubText() != null ? getSubText().equals(that.getSubText()) : that.getSubText() == null;
 	}
 
-	public String getLabel()
-	{
-		return label;
-	}
-
-	public NyaSelectItem setLabel(String label)
-	{
-		this.label = label;
-		return this;
-	}
-
 	@Override
 	public int hashCode()
 	{
@@ -213,4 +190,31 @@ public class NyaSelectItem
 		result = 31 * result + (getSubText() != null ? getSubText().hashCode() : 0);
 		return result;
 	}
+
+	public String getLabel()
+	{
+		return label;
+	}
+
+	public NyaSelectItem setLabel(String label)
+	{
+		this.label = label;
+		return this;
+	}
+
+	@Override
+	public String getText()
+	{
+		return text;
+	}
+
+
+	@Override
+	public NyaSelectItem setText(String text)
+	{
+		this.text = text;
+		return this;
+	}
+
+
 }

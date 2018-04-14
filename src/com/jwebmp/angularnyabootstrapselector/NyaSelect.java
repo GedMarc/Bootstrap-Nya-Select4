@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.angularnyabootstrapselector;
+package com.jwebmp.angularnyabootstrapselector;
 
-import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
-import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
-import za.co.mmagon.jwebswing.base.html.List;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
-import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.BSFormChildren;
-import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
-import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.base.angular.AngularAttributes;
+import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.base.html.List;
+import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.plugins.bootstrap4.forms.BSFormChildren;
+import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
+import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
 
 /**
  * An implementation of

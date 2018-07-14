@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.angularnyabootstrapselector;
+package com.jwebmp.plugins.angularnyabootstrapselector;
 
 public interface INyaSelect
 {
@@ -112,7 +112,8 @@ public interface INyaSelect
 	NyaSelect setShowMenuIcon(boolean showMenuIcon);
 
 	/**
-	 * if sets to count greater than x, the dropdown-toggle button will show the number of user selected options when the number of options greater than x. otherwise, show the content.
+	 * if sets to count greater than x, the dropdown-toggle button will show the number of user selected options when the number of options greater than x. otherwise, show the
+	 * content.
 	 *
 	 * @param selectedTextAsCount
 	 * @param countThan

@@ -15,43 +15,30 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.angularnyabootstrapselector;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.jwebmp.plugins.angularnyabootstrapselector;
 
-import com.jwebmp.Page;
 import org.junit.jupiter.api.Test;
 
 /**
  * @author GedMarc
  */
-public class NyaSelectReferencePoolTest
+public class NyaSelectTest
 {
 
-	public NyaSelectReferencePoolTest()
+	public NyaSelectTest()
 	{
 	}
 
 	@Test
-	public void testSomeMethod()
+	public void testSetMultiple()
 	{
-		NyaSelect nya = new NyaSelect("test.me");
-		nya.add(new NyaSelectItem().setText("Item 1")
-		                           .setValue("value1")
-		                           .setIconClass("fa-shopping")
-		                           .setCheckClass("checking"));
-
-		System.out.println(nya.toString(true));
-	}
-
-	@Test
-	public void testPage()
-	{
-		Page p = new Page();
-		p.getOptions()
-		 .setDynamicRender(false);
-		NyaSelect nya = new NyaSelect("test.me");
-		p.getBody()
-		 .add(nya);
-		System.out.println(p.toString(true));
+		NyaSelect ns = new NyaSelect("asdf.asdf").add(new NyaSelectItem("asdf", "asdf", "asdf", "", ""));
+		System.out.println(ns.toString(true));
 	}
 
 }

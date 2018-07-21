@@ -16,13 +16,13 @@
  */
 package com.jwebmp.plugins.angularnyabootstrapselector;
 
-import com.jwebmp.base.angular.AngularAttributes;
-import com.jwebmp.base.angular.AngularPageConfigurator;
-import com.jwebmp.base.html.List;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.base.angular.AngularAttributes;
+import com.jwebmp.core.base.angular.AngularPageConfigurator;
+import com.jwebmp.core.base.html.List;
+import com.jwebmp.core.plugins.ComponentInformation;
+import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.plugins.bootstrap4.forms.BSFormChildren;
 import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
-import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
 
 /**
  * An implementation of

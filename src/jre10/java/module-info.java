@@ -1,3 +1,6 @@
+import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.angularnyabootstrapselector.NysSelectBootstrapConfigurator;
+
 module com.jwebmp.plugins.angularnyabootstrapselector {
 	exports com.jwebmp.plugins.angularnyabootstrapselector;
 
@@ -7,4 +10,6 @@ module com.jwebmp.plugins.angularnyabootstrapselector {
 
 	requires java.validation;
 	requires com.jwebmp.plugins.bootstrap4;
+
+	provides IPageConfigurator with NysSelectBootstrapConfigurator;
 }

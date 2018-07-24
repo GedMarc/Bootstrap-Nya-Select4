@@ -59,9 +59,6 @@ public class NysSelectBootstrapConfigurator
 	{
 		if (!page.isConfigured())
 		{
-			page.getAngular()
-			    .getAngularModules()
-			    .add(new NyaSelectAngularModule());
 			page.getBody()
 			    .getJavascriptReferences()
 			    .add(NyaSelectReferencePool.NyaReference.getJavaScriptReference());

@@ -1,4 +1,6 @@
+import com.jwebmp.core.base.angular.services.IAngularModule;
 import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.angularnyabootstrapselector.NyaSelectAngularModule;
 import com.jwebmp.plugins.angularnyabootstrapselector.NysSelectBootstrapConfigurator;
 
 module com.jwebmp.plugins.angularnyabootstrapselector {
@@ -12,4 +14,5 @@ module com.jwebmp.plugins.angularnyabootstrapselector {
 	requires com.jwebmp.plugins.bootstrap4;
 
 	provides IPageConfigurator with NysSelectBootstrapConfigurator;
+	provides IAngularModule with NyaSelectAngularModule;
 }

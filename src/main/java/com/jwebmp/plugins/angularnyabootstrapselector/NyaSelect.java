@@ -36,9 +36,9 @@ import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
 		description = "An Bootstrap dropdown component and replacement of vanilla select element, designed for AngularJS ",
 		url = "http://nya.io/nya-bootstrap-select/#!/",
 		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSNyaSelect/wiki")
-public class NyaSelect
-		extends List<NyaSelectChildren, NyaSelectAttributes, NyaSelectEvents, NyaSelect>
-		implements BSFormChildren, BSFormGroupChildren, INyaSelect
+public class NyaSelect<J extends NyaSelect<J>>
+		extends List<NyaSelectChildren, NyaSelectAttributes, NyaSelectEvents, J>
+		implements BSFormChildren<NyaSelectChildren, J>, BSFormGroupChildren<NyaSelectChildren, J>, INyaSelect
 {
 
 	private static final long serialVersionUID = 1L;
@@ -69,10 +69,10 @@ public class NyaSelect
 	}
 
 	@Override
-	public NyaSelect bind(String variableName)
+	public J bind(String variableName)
 	{
 		addAttribute(AngularAttributes.ngModel, variableName);
-		return this;
+		return super.bind(variableName);
 	}
 
 	/**
@@ -188,11 +188,11 @@ public class NyaSelect
 	{
 		if (selectedTextAsValue)
 		{
-			addAttribute(SelectedTextAttributeText, "value");
+			addAttribute(NyaSelect.SelectedTextAttributeText, "value");
 		}
 		else
 		{
-			getAttributes().remove(SelectedTextAttributeText);
+			getAttributes().remove(NyaSelect.SelectedTextAttributeText);
 		}
 		return this;
 	}
@@ -202,11 +202,11 @@ public class NyaSelect
 	{
 		if (selectedTextAsCount)
 		{
-			addAttribute(SelectedTextAttributeText, "count");
+			addAttribute(NyaSelect.SelectedTextAttributeText, "count");
 		}
 		else
 		{
-			getAttributes().remove(SelectedTextAttributeText);
+			getAttributes().remove(NyaSelect.SelectedTextAttributeText);
 		}
 		return this;
 	}
@@ -230,13 +230,21 @@ public class NyaSelect
 	{
 		if (selectedTextAsCount)
 		{
-			addAttribute(SelectedTextAttributeText, "count>" + countThan);
+			addAttribute(NyaSelect.SelectedTextAttributeText, "count>" + countThan);
 		}
 		else
 		{
-			getAttributes().remove(SelectedTextAttributeText);
+			getAttributes().remove(NyaSelect.SelectedTextAttributeText);
 		}
 		return this;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int hash = 7;
+		hash = 79 * hash + (getID().hashCode());
+		return hash;
 	}
 
 	@Override
@@ -255,14 +263,6 @@ public class NyaSelect
 			return false;
 		}
 		return super.equals(obj);
-	}
-
-	@Override
-	public int hashCode()
-	{
-		int hash = 7;
-		hash = 79 * hash + (getID().hashCode());
-		return hash;
 	}
 
 }

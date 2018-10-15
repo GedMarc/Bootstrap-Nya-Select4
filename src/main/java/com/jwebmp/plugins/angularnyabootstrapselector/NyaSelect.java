@@ -35,7 +35,7 @@ import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
 @ComponentInformation(name = "Bootstrap Nya Select",
 		description = "An Bootstrap dropdown component and replacement of vanilla select element, designed for AngularJS ",
 		url = "http://nya.io/nya-bootstrap-select/#!/",
-		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSNyaSelect/wiki")
+		wikiUrl = "https://github.com/GedMarc/JWebMP-BSNyaSelect/wiki")
 public class NyaSelect<J extends NyaSelect<J>>
 		extends List<NyaSelectChildren, NyaSelectAttributes, NyaSelectEvents, J>
 		implements BSFormChildren<NyaSelectChildren, J>, BSFormGroupChildren<NyaSelectChildren, J>, INyaSelect

@@ -52,7 +52,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	public NyaSelect(String bindingVariableName)
 	{
 		this();
-		addAttribute(AngularAttributes.ngModel, bindingVariableName);
+		addAttribute(AngularAttributes.ngModel.getAttributeName(), bindingVariableName);
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	@Override
 	public J bind(String variableName)
 	{
-		addAttribute(AngularAttributes.ngModel, variableName);
+		addAttribute(AngularAttributes.ngModel.getAttributeName(), variableName);
 		return super.bind(variableName);
 	}
 

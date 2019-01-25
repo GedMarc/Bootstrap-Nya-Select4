@@ -14,31 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.angularnyabootstrapselector;
+package com.jwebmp.plugins.angularnyabootstrapselector4;
 
-import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.base.ComponentBase;
+import com.jwebmp.core.base.html.interfaces.children.ListChildren;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
- * All the options
- * <p>
- *
  * @author GedMarc
  * @version 1.0
- * 		<p>
- * 		<p>
- * @since Mar 4, 2015
+ * @since 07 Aug 2015
  */
-public class NyaSelectOptions
-		extends JavaScriptPart
+public interface NyaSelectChildren<C extends IComponentHierarchyBase, J extends ComponentBase>
+		extends IComponentHierarchyBase<C, J>, ListChildren<C, J>
 {
-
-
-	/**
-	 * The options for the component
-	 */
-	public NyaSelectOptions()
-	{
-		//Nothing Needed
-	}
 
 }

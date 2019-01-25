@@ -1,4 +1,4 @@
-package com.jwebmp.plugins.angularnyabootstrapselector.implementations;
+package com.jwebmp.plugins.angularnyabootstrapselector4.implementations;
 
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;

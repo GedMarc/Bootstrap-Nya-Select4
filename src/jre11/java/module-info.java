@@ -2,9 +2,9 @@ import com.jwebmp.core.base.angular.services.IAngularModule;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.angularnyabootstrapselector.NyaSelectAngularModule;
-import com.jwebmp.plugins.angularnyabootstrapselector.NyaSelectPageConfigurator;
-import com.jwebmp.plugins.angularnyabootstrapselector.implementations.BSNyaSelect4ExclusionsModule;
+import com.jwebmp.plugins.angularnyabootstrapselector4.NyaSelectAngularModule;
+import com.jwebmp.plugins.angularnyabootstrapselector4.NyaSelectPageConfigurator;
+import com.jwebmp.plugins.angularnyabootstrapselector4.implementations.BSNyaSelect4ExclusionsModule;
 
 module com.jwebmp.plugins.angularnyabootstrap4selector {
 	exports com.jwebmp.plugins.angularnyabootstrapselector;

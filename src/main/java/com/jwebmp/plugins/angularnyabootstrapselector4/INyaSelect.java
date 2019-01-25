@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.plugins.angularnyabootstrapselector;
+package com.jwebmp.plugins.angularnyabootstrapselector4;
 
 public interface INyaSelect
 {

@@ -18,6 +18,8 @@
 package com.jwebmp.plugins.angularnyabootstrapselector;
 
 import com.jwebmp.core.Page;
+import com.jwebmp.plugins.angularnyabootstrapselector4.NyaSelect;
+import com.jwebmp.plugins.angularnyabootstrapselector4.NyaSelectItem;
 import org.junit.jupiter.api.Test;
 
 /**

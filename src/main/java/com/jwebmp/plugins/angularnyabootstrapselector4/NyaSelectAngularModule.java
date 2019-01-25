@@ -14,51 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.angularnyabootstrapselector;
+package com.jwebmp.plugins.angularnyabootstrapselector4;
 
-import com.jwebmp.core.base.html.interfaces.AttributeDefinitions;
-import com.jwebmp.core.utilities.StaticStrings;
-
-import static com.jwebmp.core.utilities.StaticStrings.*;
+import com.jwebmp.core.base.angular.modules.AngularModuleBase;
 
 /**
  * @author GedMarc
+ * @since 27 Jan 2017
  */
-public enum NyaSelectAttributes
-		implements AttributeDefinitions
+public class NyaSelectAngularModule
+		extends AngularModuleBase<NyaSelectAngularModule>
 {
-	Visibility;
 
-	private boolean isKeyword;
 
-	/**
-	 * The component attributes
-	 */
-	NyaSelectAttributes()
+	public NyaSelectAngularModule()
 	{
+		super("nya.bootstrap.select");
+
+	}
+
+	@Override
+	public String renderFunction()
+	{
+		return "";
 	}
 
 	/**
-	 * If the attribute is a keyword
+	 * If this page configurator is enabled
 	 *
-	 * @return
+	 * @return if the configuration must run
 	 */
 	@Override
-	public boolean isKeyword()
+	public boolean enabled()
 	{
-		return false;
-	}
-
-	/**
-	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
-	 *
-	 * @return
-	 */
-	@Override
-	public String toString()
-	{
-		return name().toLowerCase()
-		             .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
-		             .replace("$", "");
+		return NyaSelectPageConfigurator.isEnabled();
 	}
 }

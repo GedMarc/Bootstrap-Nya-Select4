@@ -14,31 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.angularnyabootstrapselector4;
+package com.jwebmp.plugins.bs4.nyaselect;
 
-import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.base.angular.modules.AngularModuleBase;
 
 /**
- * All the options
- * <p>
- *
  * @author GedMarc
- * @version 1.0
- * 		<p>
- * 		<p>
- * @since Mar 4, 2015
+ * @since 27 Jan 2017
  */
-public class NyaSelectOptions
-		extends JavaScriptPart
+public class NyaSelectAngularModule
+		extends AngularModuleBase<NyaSelectAngularModule>
 {
 
 
-	/**
-	 * The options for the component
-	 */
-	public NyaSelectOptions()
+	public NyaSelectAngularModule()
 	{
-		//Nothing Needed
+		super("nya.bootstrap.select");
+
 	}
 
+	@Override
+	public String renderFunction()
+	{
+		return "";
+	}
+
+	/**
+	 * If this page configurator is enabled
+	 *
+	 * @return if the configuration must run
+	 */
+	@Override
+	public boolean enabled()
+	{
+		return NyaSelectPageConfigurator.isEnabled();
+	}
 }

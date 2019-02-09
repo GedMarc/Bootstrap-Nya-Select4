@@ -1,5 +1,9 @@
-module com.jwebmp.plugins.angularnyabootstrap4selector {
-	exports com.jwebmp.plugins.angularnyabootstrapselector4;
+import com.jwebmp.plugins.bs4.nyaselect.NyaSelectAngularModule;
+import com.jwebmp.plugins.bs4.nyaselect.NyaSelectPageConfigurator;
+import com.jwebmp.plugins.bs4.nyaselect.implementations.BS4NyaSelectExclusionsModule;
+
+module com.jwebmp.plugins.bs4.nyaselect {
+	exports com.jwebmp.plugins.bs4.nyaselect;
 
 	requires com.jwebmp.core;
 	requires com.jwebmp.logmaster;
@@ -10,12 +14,12 @@ module com.jwebmp.plugins.angularnyabootstrap4selector {
 	requires com.jwebmp.guicedinjection;
 	requires com.jwebmp.core.angularjs;
 
-	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.angularnyabootstrapselector4.NyaSelectPageConfigurator;
-	provides com.jwebmp.core.base.angular.services.IAngularModule with com.jwebmp.plugins.angularnyabootstrapselector4.NyaSelectAngularModule;
+	provides com.jwebmp.core.services.IPageConfigurator with NyaSelectPageConfigurator;
+	provides com.jwebmp.core.base.angular.services.IAngularModule with NyaSelectAngularModule;
 
-	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.angularnyabootstrapselector4.implementations.BSNyaSelect4ExclusionsModule;
-	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.angularnyabootstrapselector4.implementations.BSNyaSelect4ExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with BS4NyaSelectExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with BS4NyaSelectExclusionsModule;
 
-	opens com.jwebmp.plugins.angularnyabootstrapselector4 to com.fasterxml.jackson.databind, com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4.nyaselect to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
 

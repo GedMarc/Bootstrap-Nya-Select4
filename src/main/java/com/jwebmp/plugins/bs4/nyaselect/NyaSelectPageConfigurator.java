@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.angularnyabootstrapselector4;
+package com.jwebmp.plugins.bs4.nyaselect;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
@@ -84,7 +84,7 @@ public class NyaSelectPageConfigurator
 	@SuppressWarnings("unchecked")
 	public Page configure(Page page)
 	{
-		if (!page.isConfigured())
+		if (!page.isConfigured() && enabled())
 		{
 			page.getBody()
 			    .getJavascriptReferences()

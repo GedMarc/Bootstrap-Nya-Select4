@@ -14,33 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package com.jwebmp.plugins.bs4.nyaselect;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.jwebmp.plugins.angularnyabootstrapselector;
-
-import com.jwebmp.plugins.bs4.nyaselect.NyaSelect;
-import com.jwebmp.plugins.bs4.nyaselect.NyaSelectItem;
-import org.junit.jupiter.api.Test;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 /**
+ * All the options
+ * <p>
+ *
  * @author GedMarc
+ * @version 1.0
+ * 		<p>
+ * 		<p>
+ * @since Mar 4, 2015
  */
-public class NyaSelectTest
+public class NyaSelectOptions
+		extends JavaScriptPart
 {
 
-	public NyaSelectTest()
-	{
-	}
 
-	@Test
-	public void testSetMultiple()
+	/**
+	 * The options for the component
+	 */
+	public NyaSelectOptions()
 	{
-		NyaSelect ns = new NyaSelect<>("asdf.asdf").add(new NyaSelectItem("asdf", "asdf", "asdf", "", ""));
-		System.out.println(ns.toString(true));
+		//Nothing Needed
 	}
 
 }

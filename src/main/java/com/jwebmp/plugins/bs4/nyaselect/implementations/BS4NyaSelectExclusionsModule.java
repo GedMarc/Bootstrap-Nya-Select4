@@ -1,4 +1,4 @@
-package com.jwebmp.plugins.angularnyabootstrapselector4.implementations;
+package com.jwebmp.plugins.bs4.nyaselect.implementations;
 
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
@@ -7,9 +7,9 @@ import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BSNyaSelect4ExclusionsModule
-		implements IGuiceScanModuleExclusions<BSNyaSelect4ExclusionsModule>,
-				           IGuiceScanJarExclusions<BSNyaSelect4ExclusionsModule>
+public class BS4NyaSelectExclusionsModule
+		implements IGuiceScanModuleExclusions<BS4NyaSelectExclusionsModule>,
+				           IGuiceScanJarExclusions<BS4NyaSelectExclusionsModule>
 {
 
 	@Override

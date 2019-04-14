@@ -2,15 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.jwebmp</groupId>
-        <artifactId>jwebmp-builder</artifactId>
+        <groupId>com.jwebmp.plugins.bootstrap</groupId>
+        <artifactId>jwebmp-plugins-bootstrap-parent</artifactId>
         <version>0.0.0_0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jwebmp-bootstrap-nya-select4</artifactId>
+    <artifactId>jwebmp-bootstrap-nya-select</artifactId>
     <packaging>jar</packaging>
 
-    <name>Bootstrap Nya Select 4</name>
+    <name>Bootstrap Nya Select</name>
     <description>The JWebSwing implementation for Bootstrap Nya4 Select</description>
     <url>https://github.com/GedMarc/Bootstrap-Nya-Select4</url>
 
@@ -36,11 +36,8 @@
             <artifactId>hamcrest-all</artifactId>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jwebmp-bootstrap4</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <!--<optional>true</optional>-->
+            <groupId>com.jwebmp.plugins.bootstrap</groupId>
+            <artifactId>jwebmp-bootstrap</artifactId>
         </dependency>
     </dependencies>
     <scm>

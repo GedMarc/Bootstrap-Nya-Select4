@@ -68,10 +68,11 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public J bind(String variableName)
 	{
 		addAttribute(AngularAttributes.ngModel.getAttributeName(), variableName);
-		return super.bind(variableName);
+		return (J) this;
 	}
 
 	/**
@@ -236,32 +237,6 @@ public class NyaSelect<J extends NyaSelect<J>>
 			getAttributes().remove(NyaSelect.SelectedTextAttributeText);
 		}
 		return this;
-	}
-
-	@Override
-	public int hashCode()
-	{
-		int hash = 7;
-		hash = 79 * hash + (getID().hashCode());
-		return hash;
-	}
-
-	@Override
-	public boolean equals(Object obj)
-	{
-		if (this == obj)
-		{
-			return true;
-		}
-		if (obj == null)
-		{
-			return false;
-		}
-		if (getClass() != obj.getClass())
-		{
-			return false;
-		}
-		return super.equals(obj);
 	}
 
 }

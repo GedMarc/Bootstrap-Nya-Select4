@@ -138,59 +138,6 @@ public class NyaSelectItem
 		return this;
 	}
 
-	@Override
-	public int hashCode()
-	{
-		int result = super.hashCode();
-		result = 31 * result + (getLabel() != null ? getLabel().hashCode() : 0);
-		result = 31 * result + (getText() != null ? getText().hashCode() : 0);
-		result = 31 * result + (getIconClass() != null ? getIconClass().hashCode() : 0);
-		result = 31 * result + (getValue() != null ? getValue().hashCode() : 0);
-		result = 31 * result + (getCheckClass() != null ? getCheckClass().hashCode() : 0);
-		result = 31 * result + (getSubText() != null ? getSubText().hashCode() : 0);
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object o)
-	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof NyaSelectItem))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		NyaSelectItem that = (NyaSelectItem) o;
-
-		if (getLabel() != null ? !getLabel().equals(that.getLabel()) : that.getLabel() != null)
-		{
-			return false;
-		}
-		if (getText() != null ? !getText().equals(that.getText()) : that.getText() != null)
-		{
-			return false;
-		}
-		if (getIconClass() != null ? !getIconClass().equals(that.getIconClass()) : that.getIconClass() != null)
-		{
-			return false;
-		}
-		if (getValue() != null ? !getValue().equals(that.getValue()) : that.getValue() != null)
-		{
-			return false;
-		}
-		if (getCheckClass() != null ? !getCheckClass().equals(that.getCheckClass()) : that.getCheckClass() != null)
-		{
-			return false;
-		}
-		return getSubText() != null ? getSubText().equals(that.getSubText()) : that.getSubText() == null;
-	}
 
 	public String getLabel()
 	{

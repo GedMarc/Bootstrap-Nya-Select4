@@ -19,7 +19,7 @@ package com.jwebmp.plugins.bs4.nyaselect;
 import com.jwebmp.core.base.html.*;
 import com.jwebmp.plugins.bootstrap4.dropdown.options.BSDropDownOptions;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * @author GedMarc

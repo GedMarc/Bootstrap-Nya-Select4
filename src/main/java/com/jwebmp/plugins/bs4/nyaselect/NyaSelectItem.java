@@ -26,7 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * @since 04 Feb 2017
  */
 public class NyaSelectItem
-		extends ListItem
+		extends ListItem<NyaSelectItem>
 		implements NyaSelectChildren
 {
 

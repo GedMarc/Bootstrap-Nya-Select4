@@ -17,7 +17,9 @@
 package com.jwebmp.plugins.bs4.nyaselect;
 
 import com.jwebmp.core.base.ComponentBase;
+import com.jwebmp.core.base.html.interfaces.GlobalChildren;
 import com.jwebmp.core.base.html.interfaces.children.ListChildren;
+import com.jwebmp.core.base.html.interfaces.children.ListItemChildren;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
@@ -25,8 +27,8 @@ import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface NyaSelectChildren<C extends IComponentHierarchyBase, J extends ComponentBase>
-		extends IComponentHierarchyBase<C, J>, ListChildren<C, J>
+public interface NyaSelectChildren
+		extends ListChildren
 {
 
 }

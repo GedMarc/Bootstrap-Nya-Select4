@@ -38,7 +38,7 @@ import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroupChildren;
 		wikiUrl = "https://github.com/GedMarc/JWebMP-BSNyaSelect/wiki")
 public class NyaSelect<J extends NyaSelect<J>>
 		extends List<NyaSelectChildren, NyaSelectAttributes, NyaSelectEvents, J>
-		implements BSFormChildren<NyaSelectChildren, J>, BSFormGroupChildren<NyaSelectChildren, J>, INyaSelect
+		implements BSFormChildren, BSFormGroupChildren, INyaSelect
 {
 
 
@@ -86,7 +86,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setMultiple(boolean multiple)
+	public NyaSelect<?> setMultiple(boolean multiple)
 	{
 		if (multiple)
 		{
@@ -100,7 +100,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setLiveSearch(boolean liveSearch)
+	public NyaSelect<?> setLiveSearch(boolean liveSearch)
 	{
 		if (liveSearch)
 		{
@@ -114,7 +114,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setRequired(boolean required)
+	public NyaSelect<?> setRequired(boolean required)
 	{
 		if (required)
 		{
@@ -128,7 +128,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setDisabled(String expression)
+	public NyaSelect<?> setDisabled(String expression)
 	{
 		if (expression != null && !expression.isEmpty())
 		{
@@ -142,7 +142,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setDisplaySize(Integer displaysize)
+	public NyaSelect<?> setDisplaySize(Integer displaysize)
 	{
 		if (displaysize != null && displaysize != 0)
 		{
@@ -156,7 +156,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setTitle(String title)
+	public NyaSelect<?> setTitle(String title)
 	{
 		if (title != null && !title.isEmpty())
 		{
@@ -170,7 +170,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setActionsBox(boolean actionsBox)
+	public NyaSelect<?> setActionsBox(boolean actionsBox)
 	{
 		if (actionsBox)
 		{
@@ -184,7 +184,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setSelectedTextValue(boolean selectedTextAsValue)
+	public NyaSelect<?> setSelectedTextValue(boolean selectedTextAsValue)
 	{
 		if (selectedTextAsValue)
 		{
@@ -198,7 +198,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setSelectedTextCount(boolean selectedTextAsCount)
+	public NyaSelect<?> setSelectedTextCount(boolean selectedTextAsCount)
 	{
 		if (selectedTextAsCount)
 		{
@@ -212,7 +212,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setShowMenuIcon(boolean showMenuIcon)
+	public NyaSelect<?> setShowMenuIcon(boolean showMenuIcon)
 	{
 		if (showMenuIcon)
 		{
@@ -226,7 +226,7 @@ public class NyaSelect<J extends NyaSelect<J>>
 	}
 
 	@Override
-	public NyaSelect setSelectedTextCountGreaterThan(boolean selectedTextAsCount, int countThan)
+	public NyaSelect<?> setSelectedTextCountGreaterThan(boolean selectedTextAsCount, int countThan)
 	{
 		if (selectedTextAsCount)
 		{

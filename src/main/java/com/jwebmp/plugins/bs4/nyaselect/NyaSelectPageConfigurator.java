@@ -18,6 +18,7 @@ package com.jwebmp.plugins.bs4.nyaselect;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
 
 import jakarta.validation.constraints.NotNull;
@@ -36,11 +37,16 @@ import jakarta.validation.constraints.NotNull;
 		pluginGitUrl = "https://github.com/GedMarc/JWebMP-BSNyaSelect",
 		pluginSourceUrl = "https://github.com/lordfriend/nya-bootstrap-select",
 		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-BSNyaSelect4/wiki",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BSNyaSelect4.jar/download",
-		pluginIconUrl = "bower_components/nya-bootstrap-select/logo.png",
-		pluginIconImageUrl = "bower_components/nya-bootstrap-select/logo.png",
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.bootstrap/jwebmp-bootstrap-nya-select",
+		pluginIconUrl = "",
+		pluginIconImageUrl = "",
 		pluginLastUpdatedDate = "2017/03/04",
-		pluginOriginalHomepage = "http://nya.io/nya-bootstrap-select/#!/")
+		pluginOriginalHomepage = "http://nya.io/nya-bootstrap-select/#!/",
+		pluginGroupId = "com.jwebmp.plugins.bootstrap",
+		pluginArtifactId = "jwebmp-bootstrap-nya-select",
+		pluginModuleName = "com.jwebmp.plugins.bs4.nyaselect",
+		pluginStatus = PluginStatus.Released
+)
 public class NyaSelectPageConfigurator
 		implements IPageConfigurator<NyaSelectPageConfigurator>
 {

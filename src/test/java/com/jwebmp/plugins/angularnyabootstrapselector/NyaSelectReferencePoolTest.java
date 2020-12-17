@@ -18,6 +18,7 @@
 package com.jwebmp.plugins.angularnyabootstrapselector;
 
 import com.jwebmp.core.Page;
+import com.jwebmp.core.base.html.DivSimple;
 import com.jwebmp.plugins.bs4.nyaselect.NyaSelect;
 import com.jwebmp.plugins.bs4.nyaselect.NyaSelectItem;
 import org.junit.jupiter.api.Test;
@@ -47,12 +48,12 @@ public class NyaSelectReferencePoolTest
 	@Test
 	public void testPage()
 	{
-		Page p = new Page();
+		Page<?> p = new Page();
 		p.getOptions()
 		 .setDynamicRender(false);
 		NyaSelect nya = new NyaSelect("test.me");
 		p.getBody()
-		 .add(nya);
+		 .add(new DivSimple<>().add(nya));
 		System.out.println(p.toString(true));
 	}
 

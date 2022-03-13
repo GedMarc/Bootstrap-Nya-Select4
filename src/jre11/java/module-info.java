@@ -9,7 +9,7 @@ module com.jwebmp.plugins.bs4.nyaselect {
 	requires jakarta.validation;
 	requires com.jwebmp.plugins.bootstrap4;
 	requires com.guicedee.guicedinjection;
-	requires com.jwebmp.core.angularjs;
+	requires com.jwebmp.core.angular;
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.bs4.nyaselect.NyaSelectPageConfigurator;
 	provides com.jwebmp.core.base.angular.services.IAngularModule with com.jwebmp.plugins.bs4.nyaselect.NyaSelectAngularModule;

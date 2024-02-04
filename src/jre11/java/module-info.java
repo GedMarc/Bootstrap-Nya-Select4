@@ -4,7 +4,7 @@ module com.jwebmp.plugins.bs4.nyaselect {
 	exports com.jwebmp.plugins.bs4.nyaselect;
 
 	requires com.jwebmp.core;
-	requires com.guicedee.logmaster;
+	
 
 	requires jakarta.validation;
 	requires com.jwebmp.plugins.bootstrap4;
